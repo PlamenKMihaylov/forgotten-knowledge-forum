@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import type { UserContext } from "../state/app.context";
+import { UserContext } from "../state/app.context";
 
 export function useUser() {
   const ctx = useContext(UserContext);

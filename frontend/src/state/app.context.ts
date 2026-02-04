@@ -1,6 +1,5 @@
 import type { User } from './../types/user';
 import { createContext } from "react";
-
 export interface UserContextValue {
     user: User | null;
     loading: boolean;
