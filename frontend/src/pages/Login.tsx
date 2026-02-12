@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../services/supabaseClient";
+import { GoogleLoginButton } from "@/components/Login/GoogleLoginButton";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -87,6 +88,7 @@ export function Login() {
           >
             Login
           </button>
+          <GoogleLoginButton onError={(msg) => setError(msg)}/>
         </form>
 
         {error && (

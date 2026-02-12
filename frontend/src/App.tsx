@@ -5,6 +5,8 @@ import { useUser } from "./hooks/useUser";
 import { Home } from "./pages/Home";
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
+import CheckEmail from './pages/CheckEmail';
+import AuthCallback from './pages/Auth/callback';
 
 export default function App() {
   const { user, loading } = useUser();
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Home />} />
+            <Route path="/check-email" element={<CheckEmail />}/>
+            <Route path="/auth/callback" element={<AuthCallback />}/>
           </>
         ) : (
           <>
